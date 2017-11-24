@@ -1,0 +1,42 @@
+<ion-content scroll="false" no-bounce>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
+      <img alt="Logo denuncia App" src="assets/img/ICONO_APP_SVG.svg"/>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+      <ion-label text-center class="titleApp">App Denuncia</ion-label>
+    </ion-col>
+  </ion-row>    
+  <ion-list inset>
+    <form [formGroup]="userForm" (ngSubmit)="onLogin()">
+      <ion-item class="test" no-lines>
+        <ion-icon color="primary" item-start ios="ios-mail" md="md-mail"></ion-icon>  
+        <ion-label floating >Email</ion-label>
+        <ion-input outline type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item no-lines margin-bottom>
+        <ion-icon color="primary" item-start ios="ios-unlock" md="md-unlock"></ion-icon>  
+        <ion-label floating>Clave</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item no-lines margin-bottom class="titleRecordPassword">
+        <ion-label>Recordar</ion-label>
+        <ion-toggle color="secondary" formControlName="recordPassword" (ionChange)="onRecordPassword()" checked="false"></ion-toggle>
+      </ion-item>
+      <div padding text-center>
+        <button color="primary" ion-button type="submit">Ingresar</button>
+      </div>
+    </form> 
+    <ion-item text-center no-lines>
+      <button color="primary" (click)="onRecoverPassword()" ion-button outline class="buttonOutline">¿Olvido su contraseña?</button>
+    </ion-item>
+    <ion-item text-center no-lines margin-top>
+      <span class="titleRegister">¿No estas registrado?</span>
+      <button color="primary" (click)="onRegistry()" ion-button outline class="buttonOutline">Registrarse</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

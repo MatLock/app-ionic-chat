@@ -1,0 +1,30 @@
+<ion-content scroll="false" no-bounce>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col>
+      <img class="imgLogo" alt="logo" src="assets/img/cloud_2.png"/>
+    </ion-col>
+    <ion-col></ion-col>
+    </ion-row>
+    <ion-row padding>
+    <ion-col col-12>
+      <h3 text-center text-wrap>Botón Alerta Municipio</h3>
+    </ion-col>
+  </ion-row> 
+  <ion-list>
+    <ion-item text-center no-lines margin-top padding-top>
+      <ion-icon ios="ios-pause" md="md-pause"></ion-icon>
+    </ion-item>
+    <ion-item text-center>
+      <ion-label>En espera de Aprovación</ion-label>
+    </ion-item>
+    <ion-item text-center no-lines padding border>
+      <ion-label>Su pedido está siendo procesado</ion-label>   
+    </ion-item>
+    <ion-item text-center no-lines margin-top>
+      <button class="capitalizeText" ion-button icon-right (click)="createImpeachment()">
+          Cancelar Registración 
+       </button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,25 @@
+page-login{
+    .button-md,.button-ios{
+        padding: 0 3em;
+    }
+    .item-input .label-md{
+        color:#000000;
+    }
+    .titleApp{
+        font-weight: bold;
+        font-size: 2em;
+    }
+    .titleRecordPassword{
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    .buttonOutline{
+        text-transform: capitalize;
+        border: none;
+        text-decoration: underline;
+    }
+    .titleRegister{
+        display: block;
+        font-weight: 550;
+    }
+}

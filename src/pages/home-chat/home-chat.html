@@ -1,0 +1,24 @@
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let channel of channels">
+      <ion-label (tap)="onSelectChannel(channel)">{{channel}}</ion-label>
+    </ion-item>
+</ion-list>
+<ion-footer>
+  <ion-toolbar>
+    <div id="footer">
+      <div class="elem">
+        <ion-input type="text" [(ngModel)]="newChannel"></ion-input>
+      </div>	
+      <div class="elem">
+        <button ion-button icon-only (tap)="addChannel()">
+          <ion-icon ios="ios-add-circle" md="md-add-circle"></ion-icon>
+        </button>
+      </div>
+    </div>
+	</ion-toolbar>	
+</ion-footer>
+

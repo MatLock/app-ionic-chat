@@ -1,0 +1,52 @@
+
+.activeHightLight{
+    background-color: map-get($colors,light);
+    color: map-get($colors,primary);
+    font-weight: bold;
+    ion-icon{
+        color: map-get($colors,primary);
+    }
+}
+.inactiveHightLight{
+    color:#767676;
+    padding-right: 5%
+}
+.infoMenu{
+    h2{
+        color:#ffffff;
+        font-weight: bold
+    }
+    p{
+        color:#ffffff;
+    }
+}
+.buttonModificarRep{
+    box-shadow: none;
+}
+.alert-md .alert-button .button-inner{
+    justify-content: center;
+}
+.selectRep{
+    padding: 5px;
+    max-width: 100%;
+    color:#ffffff;
+    font-weight: bold;
+}
+ion-toolbar .list-ios[inset] .item{
+    border-bottom: none;
+}
+.action-sheet-md .action-sheet-icon{
+    color:#9E9E9E;
+}
+.capitalizeText{
+    text-transform: capitalize;
+}
+.label-md,label-ios{
+    margin:0;
+}
+ion-app.ios [margin-top], ion-app.ios [margin-top] .scroll-content{
+    margin-top: 0;
+}
+.list-ios[inset] .item{
+    border: none;
+}

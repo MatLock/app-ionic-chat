@@ -1,0 +1,27 @@
+<ion-menu side="left" [content]="content" persistent="true">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-list inset>
+          <ion-item color="primary" no-lines>
+              <img style="max-width: none" src="assets/img/rp_argentina.png"/>
+          </ion-item>
+          <ion-item-divider color="primary" class="infoMenu" no-lines>
+            <h2>{{loggedUser.username}}</h2>
+            <ion-icon ios="ios-person" md="md-person" item-start></ion-icon>
+          </ion-item-divider>
+        </ion-list>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content no-bounce>
+       <ion-list>
+          <button menuClose ion-item no-lines detail-none color="primary" *ngFor="let p of pages" [class.activeHightLight]="p?.name === activePage" (click)="openPage(p)"> 
+              <ion-icon padding-right ios ="{{p.iconIOS}}" md ="{{p.iconAndroid}}"></ion-icon> {{p.title}}
+          </button>
+          <button menuClose ion-item no-lines detail-none color="primary" (click)="onLogout()">
+              <ion-icon padding-right ios ="ios-exit" md ="md-exit"></ion-icon> Cerrar sesión
+          </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

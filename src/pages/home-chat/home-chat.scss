@@ -1,0 +1,22 @@
+home-chat {
+    .elem{
+        position: relative;
+        min-width: 50px;
+    }
+    .elem button{
+        border-radius: 0;
+        margin: 0;
+        position: absolute;
+        height: 100%;
+    }
+    
+    div#footer div.elem:first-child{
+        flex-grow: 1;
+    }
+    div#footer{
+        display:flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+}

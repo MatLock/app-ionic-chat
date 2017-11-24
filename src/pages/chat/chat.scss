@@ -1,0 +1,57 @@
+page-chat {
+    .inner-message{
+        display: inline-block;
+        padding:5px 10px;
+        margin:5px;
+        border-radius: 3px;
+        color:white;
+    }
+    
+    .username{
+        font-weight: bold;
+        font-size: 80%;
+    }
+    .message{
+        font-size: 120%;
+    }
+    .message:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+    }
+    .elem{
+        position: relative;
+        min-width: 50px;
+    }
+    .elem button{
+        border-radius: 0;
+        margin: 0;
+        position: absolute;
+        height: 100%;
+    }
+    
+    div#footer div.elem:first-child{
+        flex-grow: 1;
+    }
+    div#footer{
+        display:flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .message-left{
+        float: left;
+        background-color: color($colors,'primary');
+    }
+    .message-right{
+        float: right;
+        background-color: color($colors,'secondary');
+    }
+    ion-input{
+        padding-left: 15px;
+        font-size: 125%;
+    }
+}

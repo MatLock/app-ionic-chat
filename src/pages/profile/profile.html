@@ -1,0 +1,52 @@
+<ion-content scroll="false" no-bounce>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <img class="imgLogo" alt="logo" src="assets/img/cloud_2.png"/>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row padding>
+      <ion-col col-12>
+        <h3 class="titlePrincipal">Botón Alerta Municipio</h3>
+      </ion-col>
+    </ion-row>    
+    <ion-list inset>
+      <form [formGroup]="userData" (ngSubmit)="onEditProfile()">
+        <ion-item class="itemTransparent">
+          <ion-icon color="primary" item-start ios="ios-mail" md="md-mail"></ion-icon>  
+          <ion-label floating>Email</ion-label>
+          <ion-input [disabled]="!edit" type="email" formControlName="user"></ion-input>
+        </ion-item>
+        <ion-item class="itemTransparent">
+            <ion-icon  color="primary" item-start ios="ios-unlock" md="md-unlock"></ion-icon>
+            <ion-label floating>Clave</ion-label>
+            <ion-input [disabled]="!edit" type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item class="itemTransparent">
+          <ion-icon  color="primary" item-start ios="ios-person" md="md-person"></ion-icon>
+          <ion-label floating>Nombre</ion-label>
+          <ion-input [disabled]="!edit" type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item class="itemTransparent">
+            <ion-icon  color="primary" item-start ios="ios-call" md="md-call"></ion-icon>
+            <ion-label floating>Célular</ion-label>
+            <ion-input  [disabled]="!edit" type="tel" formControlName="cel"></ion-input>
+        </ion-item>
+        <ion-item class="itemTransparent">
+            <ion-icon  color="primary" item-start ios="ios-document" md="md-document"></ion-icon>
+            <ion-label floating>DNI</ion-label>
+            <ion-input [disabled]="!edit" type="tel" formControlName="dni"></ion-input>
+        </ion-item>
+        <ion-item  class="itemTransparent">
+            <ion-icon  color="primary" item-start ios="ios-document" md="md-document"></ion-icon>
+            <ion-label floating>Cod. Tasa Municipal</ion-label>
+            <ion-input [disabled]="!edit" type="number" formControlName="tasaMunicipal"></ion-input>
+        </ion-item>
+        <div padding text-center>
+          <button color="primary" ion-button type="submit"  *ngIf="edit">Enviar</button>
+          <button color="primary" ion-button (tap)="enableEdition()" *ngIf="!edit">Modificar</button>
+        </div>
+      </form> 
+    </ion-list>
+  </ion-content>

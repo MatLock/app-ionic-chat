@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar  hideBackButton>
+    <ion-title style="text-align: center">
+      <img height="60" src="assets/img/cloud_2.png">
+    </ion-title>  
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+    <ion-item class="transparent" text-center no-lines>
+      <ion-label class="label" >Selecciona el tipo de Denuncia</ion-label>
+    </ion-item>
+    <ion-list>
+      <div class="container transparent" margin-bottom>
+          <ion-item class="transparent" no-lines text-center>
+              <button ion-fab  class="button-fav red-color" (press)="sendAlert('firefighters')">
+                <ion-icon style="font-size: 3em" class="default-icon" ios="ios-flame" md="md-flame"></ion-icon>
+              </button>
+              <p  class="label" margin-top>BOMBEROS</p>
+          </ion-item>
+          <ion-item class="transparent" no-lines text-center>
+            <button ion-fab color="#26A69A"class="button-fav green-color" (press)="sendAlert('medic')">
+              <ion-icon  class="default-icon doctor "></ion-icon>
+            </button>
+            <p   class="label" margin-top>MÉDICO</p>
+        </ion-item>        
+      </div>     
+      <div class="container transparent">
+          <ion-item class="transparent" no-lines text-center>
+              <button ion-fab class="button-fav blue-color" (press)="sendAlert('police')">
+                <ion-icon style="font-size: 3em" class="default-icon policeman" ></ion-icon>
+              </button>
+              <p   class="label" margin-top>POLICÍA</p>
+          </ion-item>
+          <ion-item class="transparent" no-lines text-center>
+            <button ion-fab color="purple" class="button-fav purple-color" (press)="sendAlert('violence')">
+              <ion-icon  class="default-icon" ios="ios-female" md="md-female"></ion-icon>
+            </button>
+            <p  class="label" margin-top>VIOLENCIA</p>
+        </ion-item>        
+      </div>
+      <ion-item class="transparent" col-12 item-center text-center padding-top>
+          <p  class="label" text-wrap>Presione el botón para indicar que tipo de ayuda necesita</p>
+      </ion-item>      
+    </ion-list>   
+</ion-content>

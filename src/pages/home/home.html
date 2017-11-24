@@ -1,0 +1,11 @@
+<ion-content no-bounce>
+    <ion-tabs #tab>
+        <ion-tab [root]="'ImpeachmentPage'"  [tabsHideOnSubPages] ="true" tabTitle="Alerta"  [rootParams]="{username:username}"></ion-tab>
+        <ion-tab [root]="'RegisterPage'"     [tabsHideOnSubPages] ="true" tabTitle="Registro" ></ion-tab>
+        <ion-tab [root]="'WelcomePage'"      [tabsHideOnSubPages] ="true" tabTitle="Historial" ></ion-tab>
+        <ion-tab [root]="'ProfilePage'"      [tabsHideOnSubPages] ="true" tabTitle="Perfil" ></ion-tab>
+        <ion-tab [root]="'HomeChatPage'"     [tabsHideOnSubPages] ="true" tabTitle="Mensajes" [rootParams]="{username:username}"></ion-tab>
+        <ion-tab [root]="'WelcomePage'"      [tabsHideOnSubPages] ="true" tabTitle="Salir"></ion-tab>
+    </ion-tabs>
+</ion-content>
+      

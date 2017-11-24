@@ -1,0 +1,67 @@
+page-impeachment{
+    .cover{
+        background-image:url('../assets/img/header.jpg');
+    }
+    .toolbar-background-md{
+        background-color:#424242
+    }
+    .headerCard{
+        background-color:#E8EAF6;
+    }
+    .titleCard{
+        font-weight: bold;
+        color:#000000;
+        margin-left: 0.3em;
+    }
+    .default-icon{
+        text-align:center;
+        display:block;
+        font-size:2.5em
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center
+    }
+    .button-fav{
+        margin:auto;
+        padding:3em;
+    }
+
+    .green-color{
+        background-color: #009688;
+    }
+    .red-color{
+        background-color:#F44336;
+    }
+    .blue-color{
+        background-color:#0D47A1;
+    }
+    .purple-color{
+        background-color:#8E24AA
+    }
+    .text-icon{
+        color:#000000;
+        font-weight:bold;
+        text-align:center
+    }
+    .transparent{
+        background: transparent;
+    }
+    ion-content{
+        background-image: url('../assets/img/background_gray.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .label{
+        color:#E8EAF6;
+    }
+    .policeman{
+        content: url('../assets/img/policeman.png') 
+    }
+    .doctor{
+        content: url('../assets/img/doctor.png') 
+    }
+    
+}
