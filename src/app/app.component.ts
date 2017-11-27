@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Constant } from '../config/Constant';
 import { User } from '../models/User';
 import { Pages } from '../config/Pages';
+import { FCM } from '@ionic-native/fcm';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -18,8 +20,9 @@ export class DenunciaApp {
   private pages: Array<Pages> = Pages.initPages();
   private loggedUser : User = new User();
 
-  constructor(private platform:Platform,private statusBar:StatusBar,private splashScreen:SplashScreen,private events:Events){
+  constructor(private fcm:FCM,private platform:Platform,private statusBar:StatusBar,private splashScreen:SplashScreen,private events:Events){
     this.initApp();
+    this.initFCM();
     this.onUserLogin();
   }
 
@@ -31,6 +34,27 @@ export class DenunciaApp {
     this.activePage = 'LoginPage';
   }
 
+  private initFCM(){
+    this.platform.ready().then( _ => {
+      this.fcm.subscribeToTopic('topicExample');
+      this.fcm.getToken().then(token=>{
+        console.log("TOKEN");
+        console.log(token);
+      });
+      this.fcm.onTokenRefresh().subscribe( token =>{
+        console.log(token);
+      });
+      this.fcm.onNotification().subscribe(data=>{
+        if(data.wasTapped){
+          console.log(data.message);
+          console.log("Received in background");
+        } else {
+          console.log(data.message);
+          console.log("Received in foreground");
+        };
+      });
+    });
+  }
 
   public openPage(page:Pages):void{
     let views : Array<ViewController> = this.nav.getViews();

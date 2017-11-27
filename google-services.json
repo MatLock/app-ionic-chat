@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "912864399805",
+    "firebase_url": "https://botonalerta.firebaseio.com",
+    "project_id": "botonalerta",
+    "storage_bucket": "botonalerta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912864399805:android:b73b12df0f0ca252",
+        "android_client_info": {
+          "package_name": "com.arg.alerta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912864399805-7m10hrqgsoi0i7hv9sb8o9repbmhitq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRr4qCdPKj1nVro83A2T7uoaLjJGqsSgQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

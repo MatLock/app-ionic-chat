@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera'
 import { Geolocation } from '@ionic-native/geolocation';
+import { FCM } from '@ionic-native/fcm';
 
 import { RestServices } from '../providers/rest-services';
 import { UtilsServices } from '../providers/utils-services';
@@ -47,6 +48,7 @@ const config = {
     StatusBar,
     SplashScreen,
     Camera,
+    FCM,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RestServices,
